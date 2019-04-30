@@ -1,1 +1,5 @@
-cool little portfolio site I made meshing a few tutorials together and getting rid of about 11,000 lines of jquery.
+#How to start
+yarn install
+yarn start
+
+#Created with React.js
