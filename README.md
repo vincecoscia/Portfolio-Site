@@ -1,5 +1,5 @@
-#How to start
-yarn install
-yarn start
+# How to start
+*yarn install
+*yarn start
 
-#Created with React.js
+# Created with React.js
