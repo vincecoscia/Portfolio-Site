@@ -6,19 +6,41 @@ import Portfolio from './components/portfolio/portfolio';
 import ContactUs from './components/contactus/contactus';
 import Footer from './components/footer/footer';
 import resumeData from './resumeData';
+import { PacmanLoader } from 'react-spinners'
 class App extends Component {
+  state = {
+    loading: true
+  }
+
+  componentDidMount() {
+    this.setState({ loading: false })
+  }
+
+
   render() {
+
     return (
-      <div className="App">
-        <Header resumeData={resumeData}/>
-        <Portfolio resumeData={resumeData}/>
-        <About resumeData={resumeData}/>
-        <Resume resumeData={resumeData}/>
-        <ContactUs resumeData={resumeData}/>
-        <Footer resumeData={resumeData}/>
-      </div>
+      <React.Fragment>
+
+        {this.state.loading ?
+        <div className="flex">
+          <PacmanLoader color="yellow" size={70} loading={this.state.loading} />
+        </div>
+        :
+        <div className="App">
+          <div>
+          <Header resumeData={resumeData} />
+          <Portfolio resumeData={resumeData}/>
+          <About resumeData={resumeData}/>
+          <Resume resumeData={resumeData}/>
+          <ContactUs resumeData={resumeData}/>
+          <Footer resumeData={resumeData}/>
+          </div>
+        </div>}
+      </React.Fragment>
     );
   }
+
 }
 
 export default App;
