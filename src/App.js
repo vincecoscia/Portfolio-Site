@@ -27,8 +27,8 @@ class App extends Component {
           <PacmanLoader color="yellow" size={70} loading={this.state.loading} />
         </div>
         :
-        <div className="App">
-          <div>
+        <div className="App transition">
+          <div >
           <Header resumeData={resumeData} />
           <Portfolio resumeData={resumeData}/>
           <About resumeData={resumeData}/>
