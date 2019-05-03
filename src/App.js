@@ -9,7 +9,8 @@ import resumeData from './resumeData';
 import { PacmanLoader } from 'react-spinners'
 class App extends Component {
   state = {
-    loading: true
+    loading: true,
+    isLoaded: false
   }
 
   componentDidMount() {
@@ -27,7 +28,7 @@ class App extends Component {
           <PacmanLoader color="yellow" size={70} loading={this.state.loading} />
         </div>
         :
-        <div className="App transition">
+        <div className="App">
           <div >
           <Header resumeData={resumeData} />
           <Portfolio resumeData={resumeData}/>
