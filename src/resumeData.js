@@ -16,7 +16,7 @@ let resumeData = {
         "className":"fa fa-github"
       }
     ],
-  "aboutme":"After being in sales for a few years and not finding what I was looking for professionally, I decided to pursue a passion of mine and become a Full Stack Web Developer with the help Wyncode Academy. Along the way, I met some incredible people that motivate me to become better each day, whether that be on my craft or life in general. Currently, I've focused my time on expanding my knowledge on front-end development with Javascript and utilizing the React framework.",
+  "aboutme":"After being in sales for a few years, I became motivated to pursue a passion of mine and become a Full Stack Web Developer with the help of Wyncode Academy. Along the way, I met some incredible people that motivate me to become better each day, whether that be on my craft or life in general. Currently, I've focused my time on expanding my knowledge on front-end development with Javascript and utilizing the React framework.",
   "address":"Miami, FL, USA",
   "website":"xvincentcosciax@gmail.com",
   "education":[
