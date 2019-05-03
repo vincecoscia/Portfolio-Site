@@ -41,6 +41,11 @@ e. Others
     to {opacity: 1;}
 }
 
+.transition {
+    animation-name: fadein;
+    animation-duration: .3s;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
