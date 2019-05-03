@@ -1,4 +1,4 @@
-
+/* ANIMATED BACKGROUND */
 canvas {
   position: absolute;
   width: 100%;
@@ -56,7 +56,8 @@ h1 {
     background: #77f;
     opacity: .5
   }
-/* ANIMATED BACKGROUND */
+/* ANIMATED BACKGROUND END */
+
 body {
   margin: 0;
   padding: 0;
