@@ -54,6 +54,15 @@ let resumeData = {
       skillname: "Reactjs"
     },
     {
+      skillname: "jQuery"
+    },
+    {
+      skillname: "Expressjs"
+    },
+    {
+      skillname: "MongoDB"
+    },
+    {
       skillname: "Ruby"
     },
     {
