@@ -33,6 +33,12 @@ let resumeData = {
   ],
   work: [
     {
+      CompanyName: "VMEDIA",
+      specialization: "Full Stack Web Developer",
+      Achievements:
+        "VEMDIA is a company focused on building responsive web applications for the modern internet. I utilize JavaScript frameworks like React.js and Express.js on a daily basis in conjuction with Atlas, the MongoDB cloud database. This MERN stack allows me to build customizable, secure websites for any type of client."
+    },
+    {
       CompanyName: "The Preiss Company",
       specialization: "Real Estate, Sales",
       Achievements:
