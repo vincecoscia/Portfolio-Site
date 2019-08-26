@@ -77,6 +77,12 @@ let resumeData = {
   ],
   portfolio: [
     {
+      name: "VCMEDIA",
+      description: "My company website!",
+      imgurl: "images/portfolio/vcmedia.png",
+      url: "https://www.vcmedia.io"
+    },
+    {
       name: "Legacy Yacht Sales",
       description:
         "A business website for a client who sells yachts. Built using React.js!",
