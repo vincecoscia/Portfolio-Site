@@ -4,7 +4,7 @@ export default class Porfolio extends Component {
     let resumeData = this.props.resumeData;
     return (
       <section id="portfolio">
-        <div className="row">
+        <div className="row-alt">
           <div className="twelve columns collapsed">
             <h1 id="check">Check Out Some of My Work.</h1>
             <div id="portfolio-wrapper">

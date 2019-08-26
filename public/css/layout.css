@@ -176,6 +176,7 @@ ul#nav {
 
   /* center align the menu */
   text-align: center;
+  justify-content: center;
 }
 ul#nav li {
   position: relative;
@@ -1034,7 +1035,7 @@ call-to-action .button {
   outline: none;
   font-size: 15px;
   line-height: 24px;
-  width: 65%;
+  width: 100%;
 }
 #contact input:focus,
 #contact textarea:focus,

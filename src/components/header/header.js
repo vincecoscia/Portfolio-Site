@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Header extends Component {
-
   componentDidMount() {
     let OPT = {
       selector: "#sparks",
@@ -14,7 +13,7 @@ export default class Header extends Component {
       color: "150, 150, 150",
       randColor: true,
       acceleration: [5, 40]
-    }
+    };
 
     if (window.innerWidth < 520) {
       OPT.speed = 0.05;
@@ -27,8 +26,8 @@ export default class Header extends Component {
 
       let sparks = [];
 
-      window.addEventListener('resize', () => {
-        setCanvasWidth()
+      window.addEventListener("resize", () => {
+        setCanvasWidth();
       });
 
       function setCanvasWidth() {
@@ -54,17 +53,15 @@ export default class Header extends Component {
       }
 
       function draw() {
-        ctx.fillStyle = 'rgba(0,0,0, 0.1)';
+        ctx.fillStyle = "rgba(0,0,0, 0.1)";
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
         sparks.forEach((spark, i, array) => {
-
           if (spark.opacity <= 0) {
             array.splice(i, 1);
           } else {
             drawSpark(spark);
           }
-
         });
 
         window.requestAnimationFrame(draw);
@@ -78,16 +75,16 @@ export default class Header extends Component {
 
         this.color = OPT.randColor
           ? rand(0, 255) + "," + rand(0, 255) + "," + rand(0, 255)
-          : OPT.color
+          : OPT.color;
 
         this.opacity = OPT.maxopacity - this.age / (OPT.lifetime * rand(1, 10));
 
-        this.go = function () {
-          this.x += OPT.speed * OPT.direction.x * this.acceleration / 2
-          this.y += OPT.speed * OPT.direction.y * this.acceleration / 2
+        this.go = function() {
+          this.x += (OPT.speed * OPT.direction.x * this.acceleration) / 2;
+          this.y += (OPT.speed * OPT.direction.y * this.acceleration) / 2;
 
           this.opacity = OPT.maxopacity - ++this.age / OPT.lifetime;
-        }
+        };
       }
 
       function addSpark() {
@@ -97,7 +94,8 @@ export default class Header extends Component {
       }
 
       function drawSpark(spark) {
-        let x = spark.x, y = spark.y;
+        let x = spark.x,
+          y = spark.y;
 
         spark.go();
 
@@ -111,52 +109,78 @@ export default class Header extends Component {
     })();
   }
 
-
   render() {
-
     let resumeData = this.props.resumeData;
     return (
       <React.Fragment>
-      {/*generated code*/}
-      <header id="home">
-        <canvas id="sparks" />
-         <nav id="nav-wrap">
-            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-          <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+        {/*generated code*/}
+        <header id="home">
+          <canvas id="sparks" />
+          <nav id="nav-wrap">
+            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+              Show navigation
+            </a>
+            <a className="mobile-btn" href="#" title="Hide navigation">
+              Hide navigation
+            </a>
             <ul id="nav" className="nav transition">
-               <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-               <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-               <li><a className="smoothscroll" href="#about">About</a></li>
-               <li><a className="smoothscroll" href="#resume">Resume</a></li>
-               <li><a className="smoothscroll" href="#contact">Contact</a></li>
+              <li className="current">
+                <a className="smoothscroll" href="#home">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a className="smoothscroll" href="#portfolio">
+                  Works
+                </a>
+              </li>
+              <li>
+                <a className="smoothscroll" href="#about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a className="smoothscroll" href="#resume">
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a className="smoothscroll" href="#contact">
+                  Contact
+                </a>
+              </li>
             </ul>
-         </nav>
-         <div className="row banner">
+          </nav>
+          <div className="row-alt banner">
             <div className="banner-text">
-               <h1 className="responsive-headline">Hi, I'm {resumeData.name}.</h1>
-               <h3 className="resp-head">I'm a {resumeData.role}.{resumeData.roleDescription}
-               </h3>
-               <hr/>
-               <ul className="social">
-                  {
-                    resumeData.socialLinks && resumeData.socialLinks.map(item =>{
-                      return(
-                              <li key={item.name}>
-                                <a href={item.url} target="_blank"><i className={item.className}></i></a>
-                              </li>
-                            )
-                          }
-                    )
-                  }
-               </ul>
+              <h1 className="responsive-headline">
+                Hi, I'm {resumeData.name}.
+              </h1>
+              <h3 className="resp-head">
+                I'm a {resumeData.role}.{resumeData.roleDescription}
+              </h3>
+              <hr />
+              <ul className="social">
+                {resumeData.socialLinks &&
+                  resumeData.socialLinks.map(item => {
+                    return (
+                      <li key={item.name}>
+                        <a href={item.url} target="_blank">
+                          <i className={item.className}></i>
+                        </a>
+                      </li>
+                    );
+                  })}
+              </ul>
             </div>
-         </div>
+          </div>
 
-         <p className="scrolldown">
-            <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-         </p>
-
-      </header>
+          <p className="scrolldown">
+            <a className="smoothscroll" href="#about">
+              <i className="icon-down-circle"></i>
+            </a>
+          </p>
+        </header>
       </React.Fragment>
     );
   }
