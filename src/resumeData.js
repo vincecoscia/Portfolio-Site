@@ -33,6 +33,18 @@ let resumeData = {
   ],
   work: [
     {
+      CompanyName: "Maxim Group / MVest",
+      specialization: "Web / Angular Developer",
+      Achievements:
+        "Built and continuously update m-vest.com with a team of developers using angular for the front-end framework. Collaborate with web designers and bring their vision to the site remotely utilizing zoom and Microsoft teams. Use git and bitbucket for version control. Work with Mongo DB and SQL on the back-end."
+    },
+    {
+      CompanyName: "Miami Breast Center",
+      specialization: "Full Stack Web Developer / Digital Media Specialist",
+      Achievements:
+        "Maintained 5 different websites utilizing PHP and the Wordpress platform for the front-end and SQL for the back-end. Promoted the company through the use of social media, Google Ads, and Facebook and Instagram ads. Create graphics and videos for social media and other online ads with Adobe Photoshop, Illustrator, and Premiere. Utilize best practices to ensure SEO is always up to date. Photograph the staff and record content for our websites, ads, and social media."
+    },
+    {
       CompanyName: "VMEDIA",
       specialization: "Full Stack Web Developer",
       Achievements:
@@ -77,8 +89,14 @@ let resumeData = {
   ],
   portfolio: [
     {
+      name: "MVest",
+      description: "The MVest platform built using angular",
+      imgurl: "images/portfolio/mvest.png",
+      url: "https://www.m-vest.com"
+    },
+    {
       name: "VCMEDIA",
-      description: "My company website!",
+      description: "The VCMEDIA company website built with React",
       imgurl: "images/portfolio/vcmedia.png",
       url: "https://www.vcmedia.io"
     },
